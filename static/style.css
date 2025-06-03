@@ -1,0 +1,1928 @@
+@font-face {
+    font-family: cordel;
+    src: url(fontes/cordel.otf);
+    }
+
+@font-face {
+    font-family: lemon;
+    src: url(fontes/LEMONMILK-Light.otf);
+    }
+
+* {
+    text-shadow: 0.1em 0.2em 0.1em black;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: absolute;
+    top: 10%;
+    left: 0.8%;
+    width: 99%;
+    margin: auto;
+    background: rgba(85,28,12,0.67);
+    background-image: url(imagens/istockphoto-1342820528-612x612.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: cordel;
+}
+
+body a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+body a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    font-family: lemon;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0%;
+    left: 0%;
+    background-image: url(imagens/fundo_menu1.jpg);
+    background-position: center -550px;
+    box-shadow: 0px 5px 20px #000;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+}
+
+
+.menu {
+    font-family: lemon;
+    flex-wrap: wrap;
+
+    display: flex;
+}
+
+ul.menu h1 a, ul.menu h2 a, ul.menu h3 a{
+    margin-top: 30px;
+    margin-right: 10px;
+    flex-wrap: wrap;
+    color: white;
+
+    
+    display: block;
+    text-decoration: none;
+
+    padding: 10px 10px 10px 10px;
+    margin-left: 0px;
+    font-size: x-small;
+    transition: 0.4s;
+}
+
+ul.menu h1 a:hover, ul.menu h2 a:hover, ul.menu h3 a:hover{
+    background-color: rgba(0, 0, 0, 0.36);
+    box-shadow: 0em 0em 1em white;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.logo {
+    font-family: cordel;
+    margin-top: 12px;
+    margin-left: 1em;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    color: rgb(255, 255, 255);
+    text-decoration: bold;
+}
+
+.logo a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cacto {
+    position: absolute;
+    width: 2em;
+    margin-left: 6.2em;
+    box-shadow: 0 0 0 0;
+}
+
+.cardapio {
+    box-shadow: 0 0 0 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 0.1em 0.2em 0.05em black;
+
+    margin-top: 70px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.bem-vindo {
+    width: 80%;
+    top: 20px;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    transition: 0.2s;
+}
+
+.bem-vindo:hover {
+    filter:saturate(1.2);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.container article {
+    margin: 10px 5px 50px;
+    flex: 1 1 300px;
+}
+
+img {
+    z-index: 0;
+    transition: opacity 0.25s;
+    animation: aparecer 1s;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px #000;
+}
+
+.segunda{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.seg {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.segunda:hover .seg{
+    top: 10%;
+    opacity: 80;
+}
+
+.segunda_cardapio{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: x-large;
+    opacity: 0;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.segunda_cardapio h2 {
+    font-size: x-large;
+}
+
+
+.segunda:hover .segunda_cardapio{
+    top: 50%;
+    opacity: 100;
+}
+
+.segunda:hover .overlay{
+    opacity: 0.3;
+}
+
+.terca{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.ter {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.terca:hover .ter{
+    top: 10%;
+    opacity: 80;
+}
+
+.terca_cardapio{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: x-large;
+    opacity: 0;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.terca_cardapio h2 {
+    font-size: x-large;
+}
+
+.terca:hover .terca_cardapio{
+    top: 50%;
+    opacity: 100;
+}
+
+.terca:hover .overlay{
+    opacity: 0.3;
+}
+
+.quarta{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.qua {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.quarta:hover .qua{
+    top: 10%;
+    opacity: 80;
+}
+
+.quarta_cardapio{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: x-large;
+    opacity: 0;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.quarta_cardapio h2 {
+    font-size: x-large;
+}
+
+.quarta:hover .quarta_cardapio{
+    top: 50%;
+    opacity: 100;
+}
+
+.quarta:hover .overlay{
+    opacity: 0.3;
+}
+
+.quinta{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.qui {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.quinta:hover .qui{
+    top: 10%;
+    opacity: 80;
+}
+
+.quinta_cardapio{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: x-large;
+    opacity: 0;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.quinta_cardapio h2 {
+    font-size: x-large;
+}
+
+.quinta:hover .quinta_cardapio{
+    top: 50%;
+    opacity: 100;
+}
+
+.quinta:hover .overlay{
+    opacity: 0.3;
+}
+
+.sexta{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.sex {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.sexta:hover .sex{
+    top: 10%;
+    opacity: 80;
+}
+
+.sexta_cardapio{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: x-large;
+    opacity: 0;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.sexta_cardapio h2 {
+    font-size: x-large;
+}
+
+.sexta:hover .sexta_cardapio{
+    top: 50%;
+    opacity: 100;
+}
+
+.sexta:hover .overlay{
+    opacity: 0.3;
+}
+
+.sabado{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.sab {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.sabado:hover .sab{
+    top: 10%;
+    opacity: 80;
+}
+
+.sabado_cardapio{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: x-large;
+    opacity: 0;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.sabado_cardapio h2 {
+    font-size: x-large;
+}
+
+.sabado:hover .sabado_cardapio{
+    top: 50%;
+    opacity: 100;
+}
+
+.sabado:hover .overlay{
+    opacity: 0.3;
+}
+
+.container_domingo {
+    max-width: 500px;
+    max-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.domingo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.dom {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.domingo:hover .dom{
+    top: 10%;
+    opacity: 80;
+}
+
+.domingo_cardapio{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: x-large;
+    opacity: 0;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.domingo_cardapio h2 {
+    font-size: x-large;
+}
+
+.domingo:hover .domingo_cardapio{
+    top: 50%;
+    opacity: 100;
+}
+
+.domingo:hover .overlay{
+    opacity: 0.3;
+}
+
+.overlay{
+    top: -0.6em;
+    left: -0.3em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+
+:root {
+    scroll-behavior: smooth;
+}
+
+.moqueca{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.moq {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.moqueca:hover .moq{
+    top: 10%;
+    opacity: 80;
+}
+
+.moqueca_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: large;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.moqueca_desc h2 {
+    font-size: x-large;
+}
+
+.moqueca:hover .moqueca_desc{
+    top: 50%;
+    opacity: 100;
+}
+
+.moqueca:hover .overlay{
+    opacity: 0.3;
+}
+
+.cuscuz{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.cus {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.cuscuz:hover .cus{
+    top: 10%;
+    opacity: 80;
+}
+
+.cuscuz_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: large;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.cuscuz_desc h2 {
+    font-size: x-large;
+}
+
+.cuscuz:hover .cuscuz_desc{
+    top: 55%;
+    opacity: 100;
+}
+
+.cuscuz:hover .overlay{
+    opacity: 0.3;
+}
+
+.cocada{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.coc {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.cocada:hover .coc{
+    top: 10%;
+    opacity: 80;
+}
+
+.cocada_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: large;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.cocada_desc h2 {
+    font-size: x-large;
+}
+
+.cocada:hover .cocada_desc{
+    top: 40%;
+    opacity: 100;
+}
+
+.cocada:hover .overlay{
+    opacity: 0.3;
+}
+
+.container_guarana {
+    max-width: 599px;
+    max-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.container_guarana article {
+    margin: 10px 5px 50px;
+    flex: 1 1 300px;
+}
+
+.guarana{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.gua {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.guarana:hover .gua{
+    top: 10%;
+    opacity: 80;
+}
+
+.guarana_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: large;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.guarana_desc h2 {
+    font-size: x-large;
+}
+
+.guarana:hover .guarana_desc{
+    top: 55%;
+    opacity: 100;
+}
+
+.guarana:hover .overlay{
+    opacity: 0.3;
+}
+
+.mocoto{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.moc {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.mocoto:hover .moc{
+    top: 10%;
+    opacity: 80;
+}
+
+.mocoto_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.mocoto_desc h2 {
+    font-size: x-large;
+}
+
+.mocoto:hover .mocoto_desc{
+    top: 60%;
+    opacity: 100;
+}
+
+.mocoto:hover .overlay{
+    opacity: 0.3;
+}
+
+.pacoca{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.pac {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.pacoca:hover .pac{
+    top: 10%;
+    opacity: 80;
+}
+
+.pacoca_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.pacoca_desc h2 {
+    font-size: x-large;
+}
+
+.pacoca:hover .pacoca_desc{
+    top: 40%;
+    opacity: 100;
+}
+
+.pacoca:hover .overlay{
+    opacity: 0.3;
+}
+
+.banana{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.ban {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.banana:hover .ban{
+    top: 10%;
+    opacity: 80;
+}
+
+.banana_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.banana_desc h2 {
+    font-size: x-large;
+}
+
+.banana:hover .banana_desc{
+    top: 40%;
+    opacity: 100;
+}
+
+.banana:hover .overlay{
+    opacity: 0.3;
+}
+
+.container_tiquira {
+    max-width: 599px;
+    max-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.container_tiquira article {
+    margin: 10px 5px 50px;
+    flex: 1 1 300px;
+}
+
+.tiquira{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.tiq {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.tiquira:hover .tiq{
+    top: 10%;
+    opacity: 80;
+}
+
+.tiquira_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: large;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.tiquira_desc h2 {
+    font-size: x-large;
+}
+
+.tiquira:hover .tiquira_desc{
+    top: 55%;
+    opacity: 100;
+}
+
+.tiquira:hover .overlay{
+    opacity: 0.3;
+}
+
+.buchada{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.buc {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.buchada:hover .buc{
+    top: 5%;
+    opacity: 80;
+}
+
+.buchada_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.buchada_desc h2 {
+    font-size: x-large;
+}
+
+.buchada:hover .buchada_desc{
+    top: 58%;
+    opacity: 100;
+}
+
+.buchada:hover .overlay{
+    opacity: 0.3;
+}
+
+.panelada{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.pan {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.panelada:hover .pan{
+    top: 10%;
+    opacity: 80;
+}
+
+.panelada_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.panelada_desc h2 {
+    font-size: x-large;
+}
+
+.panelada:hover .panelada_desc{
+    top: 58%;
+    opacity: 100;
+}
+
+.panelada:hover .overlay{
+    opacity: 0.3;
+}
+
+.leite{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.lei {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.leite:hover .lei{
+    top: 10%;
+    opacity: 80;
+}
+
+.leite_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.leite_desc h2 {
+    font-size: x-large;
+}
+
+.leite:hover .leite_desc{
+    top: 50%;
+    opacity: 100;
+}
+
+.leite:hover .overlay{
+    opacity: 0.3;
+}
+
+.container_cachimbo {
+    max-width: 599px;
+    max-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.container_cachimbo article {
+    margin: 10px 5px 50px;
+    flex: 1 1 300px;
+}
+
+.cachimbo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.cac {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.cachimbo:hover .cac{
+    top: 10%;
+    opacity: 80;
+}
+
+.cachimbo_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: large;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.cachimbo_desc h2 {
+    font-size: x-large;
+}
+
+.cachimbo:hover .cachimbo_desc{
+    top: 55%;
+    opacity: 100;
+}
+
+.cachimbo:hover .overlay{
+    opacity: 0.3;
+}
+
+.baiao{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.bai {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.baiao:hover .bai{
+    top: 10%;
+    opacity: 80;
+}
+
+.baiao_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.baiao_desc h2 {
+    font-size: x-large;
+}
+
+.baiao:hover .baiao_desc{
+    top: 55%;
+    opacity: 100;
+}
+
+.baiao:hover .overlay{
+    opacity: 0.3;
+}
+
+.vatapa{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.vat {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.vatapa:hover .vat{
+    top: 10%;
+    opacity: 80;
+}
+
+.vatapa_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.vatapa_desc h2 {
+    font-size: x-large;
+}
+
+.vatapa:hover .vatapa_desc{
+    top: 60%;
+    opacity: 100;
+}
+
+.vatapa:hover .overlay{
+    opacity: 0.3;
+}
+
+.torta{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.tor {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.torta:hover .tor{
+    top: 10%;
+    opacity: 80;
+}
+
+.torta_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.torta_desc h2 {
+    font-size: x-large;
+}
+
+.torta:hover .torta_desc{
+    top: 60%;
+    opacity: 100;
+}
+
+.torta:hover .overlay{
+    opacity: 0.3;
+}
+
+.container_licor {
+    max-width: 599px;
+    max-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.container_licor article {
+    margin: 10px 5px 50px;
+    flex: 1 1 300px;
+}
+
+.licor{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.lic {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.licor:hover .lic{
+    top: 10%;
+    opacity: 80;
+}
+
+.licor_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: large;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.licor_desc h2 {
+    font-size: x-large;
+}
+
+.licor:hover .licor_desc{
+    top: 40%;
+    opacity: 100;
+}
+
+.licor:hover .overlay{
+    opacity: 0.3;
+}
+
+.acaraje{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.aca {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.acaraje:hover .aca{
+    top: 10%;
+    opacity: 80;
+}
+
+.acaraje_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.acaraje_desc h2 {
+    font-size: x-large;
+}
+
+.acaraje:hover .acaraje_desc{
+    top: 60%;
+    opacity: 100;
+}
+
+.acaraje:hover .overlay{
+    opacity: 0.3;
+}
+
+.peixada{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.pei {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.peixada:hover .pei{
+    top: 10%;
+    opacity: 80;
+}
+
+.peixada_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.peixada_desc h2 {
+    font-size: x-large;
+}
+
+.peixada:hover .peixada_desc{
+    top: 40%;
+    opacity: 100;
+}
+
+.peixada:hover .overlay{
+    opacity: 0.3;
+}
+
+.pamonha{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.pam {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.pamonha:hover .pam{
+    top: 10%;
+    opacity: 80;
+}
+
+.pamonha_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.pamonha_desc h2 {
+    font-size: x-large;
+}
+
+.pamonha:hover .pamonha_desc{
+    top: 40%;
+    opacity: 100;
+}
+
+.pamonha:hover .overlay{
+    opacity: 0.3;
+}
+
+.pamonha{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.container_cana {
+    max-width: 599px;
+    max-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.container_cana article {
+    margin: 10px 5px 50px;
+    flex: 1 1 300px;
+}
+
+.cana{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.can {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.cana:hover .can{
+    top: 10%;
+    opacity: 80;
+}
+
+.cana_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: large;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.cana_desc h2 {
+    font-size: x-large;
+}
+
+.cana:hover .cana_desc{
+    top: 40%;
+    opacity: 100;
+}
+
+.cana:hover .overlay{
+    opacity: 0.3;
+}
+
+.camarao{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.cam {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.camarao:hover .cam{
+    top: 10%;
+    opacity: 80;
+}
+
+.camarao_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.camarao_desc h2 {
+    font-size: x-large;
+}
+
+.camarao:hover .camarao_desc{
+    top: 60%;
+    opacity: 100;
+}
+
+.camarao:hover .overlay{
+    opacity: 0.3;
+}
+
+.feijao{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.fei {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.feijao:hover .fei{
+    top: 10%;
+    opacity: 80;
+}
+
+.feijao_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.feijao_desc h2 {
+    font-size: x-large;
+}
+
+.feijao:hover .feijao_desc{
+    top: 40%;
+    opacity: 100;
+}
+
+.feijao:hover .overlay{
+    opacity: 0.3;
+}
+
+.moleque{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.mol {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.moleque:hover .mol{
+    top: 10%;
+    opacity: 80;
+}
+
+.moleque_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.moleque_desc h2 {
+    font-size: x-large;
+}
+
+.moleque:hover .moleque_desc{
+    top: 40%;
+    opacity: 100;
+}
+
+.moleque:hover .overlay{
+    opacity: 0.3;
+}
+
+.container_cravinho {
+    max-width: 599px;
+    max-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.container_cravinho article {
+    margin: 10px 5px 50px;
+    flex: 1 1 300px;
+}
+
+.cravinho{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.cra {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.cravinho:hover .cra{
+    top: 10%;
+    opacity: 80;
+}
+
+.cravinho_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: large;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.cravinho_desc h2 {
+    font-size: x-large;
+}
+
+.cravinho:hover .cravinho_desc{
+    top: 40%;
+    opacity: 100;
+}
+
+.cravinho:hover .overlay{
+    opacity: 0.3;
+}
+
+.feijoada{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.feijo {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.feijoada:hover .feijo{
+    top: 10%;
+    opacity: 80;
+}
+
+.feijoada_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.feijoada_desc h2 {
+    font-size: x-large;
+}
+
+.feijoada:hover .feijoada_desc{
+    top: 60%;
+    opacity: 100;
+}
+
+.feijoada:hover .overlay{
+    opacity: 0.3;
+}
+
+.farofa{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.far {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.farofa:hover .far{
+    top: 10%;
+    opacity: 80;
+}
+
+.farofa_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.farofa_desc h2 {
+    font-size: x-large;
+}
+
+.farofa:hover .farofa_desc{
+    top: 45%;
+    opacity: 100;
+}
+
+.farofa:hover .overlay{
+    opacity: 0.3;
+}
+
+.bolo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+
+.bol {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    opacity: 100;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.bolo:hover .bol{
+    top: 10%;
+    opacity: 80;
+}
+
+.bolo_desc{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: medium;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.bolo_desc h2 {
+    font-size: x-large;
+}
+
+.bolo:hover .bolo_desc{
+    top: 55%;
+    opacity: 100;
+}
+
+.bolo:hover .overlay{
+    opacity: 0.3;
+}

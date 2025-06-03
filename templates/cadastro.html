@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordestina Delivery - Login</title>
+    <link rel="stylesheet" href="static/adm.css">
+</head>
+<style>
+    ::-webkit-scrollbar{
+        background-color: #1d1d1d;
+        width: 10px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+</style>
+<header>
+    <section class="logo">
+        <img class="cacto" src="static/cacto.png">
+        <a href="http://127.0.0.1:5000"><section>Nordestina Delivery</section></a>
+    </section>
+    <ul class="menu">
+        <h1><a href="http://127.0.0.1:5000/patri">Patrocinadores</a></h1>
+        <h2><a href="http://127.0.0.1:5000/login">Login</a></h2>
+        <h3><a href="http://127.0.0.1:5000/cadastrar">Cadastre-se</a></h3>
+    </ul>
+</header>
+ <h1 class="adm">ADM</h1>
+<body>
+    <section class="container">
+        <article>
+        <form method="post" action='/admin' id='cadastrar prato'>
+            <article class="login_texto">
+                <input type="text" required name="id" id="id">
+                <label>Id</label>
+            </article>
+            <article class="login_texto">
+                <input type="text" required name="prato1" id="prato1">
+                <label>Prato 1</label>
+            </article>
+            <article class="login_texto">
+                <input type="text" required name="descrição1" id="descrição1">
+                <label>Descrição</label>
+            </article>
+            <article class="login_texto">
+                <input type="text" required name="valor1" id="valor1">
+                <label>Preço</label>
+            </article>
+            <h2 class="foto_texto">Foto prato 1:</h2>
+            <input type="file" text= "Procurar" name="bfile" id="fotop1"/>
+            <br><br>
+            <article class="login_texto">
+                <input type="text" required name="prato2" id="prato2">
+                <label>Prato 2</label>
+            </article>
+            <article class="login_texto">
+                <input type="text" required name="descrição2" id="descrição2">
+                <label>Descrição</label>
+            </article>
+            <article class="login_texto">
+                <input type="text" required name="valor2" id="valor2">
+                <label>Preço</label>
+            </article>
+            <h2 class="foto_texto">Foto prato 2:</h2>
+            <input type="file" text= "Procurar" name="bfile" id="fotop2"/>
+            <br>
+            <article class="login_texto">
+                <input type="text" required name="sobremesa" id="sobremesa">
+                <label>Sobremesa</label>
+            </article>
+            <article class="login_texto">
+                <input type="text" required name="descriçãosobremesa" id="descriçãosobremesa">
+                <label>Descrição</label>
+            </article>
+            <article class="login_texto">
+                <input type="text" required name="valorsobremesa" id="valorsobremesa">
+                <label>Preço</label>
+            </article>
+            <h2 class="foto_texto">Foto sobremesa:</h2>
+            <input type="file" text= "Procurar" name="bfile" id="fotop1s"/>
+            <br>
+            <article class="login_texto">
+                <input type="text" required name="bebida" id="bebida">
+                <label>Bebida</label>
+            </article>
+            <article class="login_texto">
+                <input type="text" required name="descriçãobebida" id="descriçãobebida">
+                <label>Descrição</label>
+            </article>
+            <article class="login_texto">
+                <input type="text" required name="valorbebida" id="valorbebida">
+                <label>Preço</label>
+            </article>
+            <h2 class="foto_texto">Foto bebida:</h2>
+            <input type="file" text= "Procurar" name="bfile" id="fotob"/>
+            <article>
+                <br>
+                <input type="radio" required id="segunda" name="dia" value="Segunda">
+                <label>Segunda-Feira</label><br>
+                <input type="radio" required id="terça" name="dia" value="Terça">
+                <label>Terça-Feira</label><br>
+                <input type="radio" required id="quarta" name="dia" value="Quarta">
+                <label>Quarta-Feira</label><br>
+                <input type="radio" required id="quinta" name="dia" value="Quinta">
+                <label>Quinta-Feira</label><br>
+                <input type="radio" required id="sexta" name="dia" value="Sexta">
+                <label>Sexta-Feira</label><br>
+                <input type="radio" required id="sábado" name="dia" value="Sábado">
+                <label>Sábado</label><br>
+                <input type="radio" required id="domingo" name="dia" value="Domingo">
+                <label>Domingo</label>
+            </article>
+            <br><br><br><br>
+
+            <h2 class="foto_texto">Plano de fundo do dia:</h2>
+            <input type="file" text= "Procurar" name="bfile"/>
+            <br><br>
+            <input type="submit" value="Cadastrar pratos">
+        </form>
+        </article>
+    </section>
+</body>
+</html>

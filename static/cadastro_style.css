@@ -1,0 +1,206 @@
+@font-face {
+    font-family: cordel;
+    src: url(fontes/cordel.otf);
+    }
+
+@font-face {
+    font-family: lemon;
+    src: url(fontes/LEMONMILK-Light.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    position: absolute;
+    top: 20%;
+    left: 0.8%;
+    width: 100%;
+    height: 60%;
+    margin: auto;
+    background: rgba(85,28,12,0.67);
+    background-image: url(imagens/istockphoto-1342820528-612x612.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: lemon;
+    display: flex;
+}
+
+header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0%;
+    left: 0%;
+    background-image: url(imagens/fundo_menu1.jpg);
+    background-position: center -550px;
+    box-shadow: 0px 5px 20px #000;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+}
+
+
+.menu {
+    flex-wrap: wrap;
+
+    display: flex;
+}
+
+ul.menu h1 a, ul.menu h2 a, ul.menu h3 a{
+    margin-top: 30px;
+    margin-right: 10px;
+    flex-wrap: wrap;
+    color: white;
+
+    display: block;
+    text-decoration: none;
+
+    padding: 10px 10px 10px 10px;
+    margin-left: 0px;
+    font-size: x-small;
+
+    transition: 0.4s;
+}
+
+ul.menu h1 a:hover, ul.menu h2 a:hover, ul.menu h3 a:hover{
+    background-color: rgba(0, 0, 0, 0.36);
+    box-shadow: 0em 0em 1em white;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.logo {
+    font-family: cordel;
+    margin-top: 12px;
+    margin-left: 1em;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    color: rgb(255, 255, 255);
+    text-decoration: bold;
+}
+
+.logo a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cacto {
+    position: absolute;
+    width: 2em;
+    margin-left: 6.2em;
+    box-shadow: 0 0 0 0;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 340px;
+    transform: translate(-50%, -50%);
+    background-image: url(imagens/fundo_menu1.jpg);
+    opacity: 0.9;
+    border-radius: 10px;
+    box-shadow: 0em 0em 3em black;
+}
+
+.seta_voltar {
+    filter: invert(1);
+    position: absolute;
+    width: 10%;
+    top: 4%;
+    left: 4%;
+    transition: 0.2s;
+}
+
+.seta_voltar:hover {
+    filter: invert(0.4);
+}
+
+.container h1{
+    color: white;
+    text-align: center;
+    padding: 20px 0px 20px 10px;
+    border-bottom: 1px solid black;
+    transition: 0.4s;
+}
+
+.container h1:hover{
+    color:rgb(0, 255, 221);
+}
+
+.container form {
+    padding: 0px 40px 20px;
+    box-sizing: border-box;
+
+}
+
+form .login_texto {
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.63);
+    margin: 25px 0 30px 0;
+}
+
+.login_texto input{
+    width: 100%;
+    padding: 0 5px 0 0;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.login_texto label {
+    position: absolute;
+    left: 1%;
+    top: 40%;
+    color: rgb(255, 255, 255);
+    transform: translateY(-16%);
+    font-size: 10px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.login_texto input:focus ~ label, 
+.login_texto input:valid ~ label    {
+    top: -10px;
+    color: rgb(0, 217, 255);
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 40px;
+    border: 1px solid;
+    background-color: rgba(0, 0, 0, 0.63);
+    border-color: black;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    border-color: white;
+    transition: 0.5s;
+}
+

@@ -1,0 +1,139 @@
+body {
+    flex-grow: inherit;
+    background-color: rgb(89, 76, 76);
+} 
+
+* {
+    font-family: lemon;
+    background-color: black;
+    color: white;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#topo {
+    position: absolute;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 9%;
+}
+
+#sobre{
+    position: absolute;
+    justify-content: flex-end;
+    background-color: rgb(0, 255, 76);
+    width: 10%;
+    height: 10%;
+}
+
+#principal{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: rgb(255, 166, 0);
+    width:70%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#principal1{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: rgb(255, 166, 0);
+    width:70%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#esquerda {
+    position: absolute;
+    margin-top: 6%;
+    background-color: rgb(0, 0, 0);
+    width: 50%;
+    height: 80%;
+}
+
+#direita {
+    position: absolute;
+    margin-left: 50.5%;
+    margin-top: 6%;
+    background-color: rgb(0, 0, 0);
+    width: 49.5%;
+    height: 80%;
+}
+
+
+.inicio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30%;
+    margin-top: 1%;
+    position: absolute;
+    font-family: lemon;
+    color: white;
+}
+.Carreira {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 45%;
+    margin-top: 1%;
+    position: absolute;
+    font-family: lemon;
+    color: white;
+}
+.competencia {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 43%;
+    margin-top: 1%;
+    position: absolute;
+    font-family: lemon;
+    color: white;
+}
+
+.extra {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 46%;
+    margin-top: 1%;
+    position: absolute;
+    font-family: lemon;
+    color: white;
+}
+
+.perfil {
+    width: 400px;
+    height: 275px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin: 20px 10px 20px 20px;
+    border: 1px solid rgb(255, 166, 0);
+}
+
+.comp {
+    width: 400px;
+    height: 275px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 100px;
+    margin: 20px 10px 10px 20px;
+    border: 1px solid rgb(255, 166, 0);
+}
+
+.centro{
+    text-align: center;
+}
+
+.margem{
+    margin-left: 0.5cm;
+}
+
+.medio{
+    font-size: normal;
+}

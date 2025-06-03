@@ -1,0 +1,205 @@
+@font-face {
+    font-family: cordel;
+    src: url(fontes/cordel.otf);
+    }
+
+@font-face {
+    font-family: lemon;
+    src: url(fontes/LEMONMILK-Light.otf );
+}
+
+* {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    position: absolute;
+    top: 20%;
+    left: 0.8%;
+    width: 100%;
+    background: rgba(85,28,12,0.67);
+    background-image: url(imagens/istockphoto-1342820528-612x612.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: lemon;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0%;
+    left: 0%;
+    background-image: url(imagens/fundo_menu1.jpg);
+    background-position: center -550px;
+    box-shadow: 0px 5px 20px #000;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+}
+
+
+.menu {
+    flex-wrap: wrap;
+
+    display: flex;
+}
+
+ul.menu h1 a, ul.menu h2 a, ul.menu h3 a{
+    margin-top: 30px;
+    margin-right: 10px;
+    flex-wrap: wrap;
+    color: white;
+
+    display: block;
+    text-decoration: none;
+
+    padding: 10px 10px 10px 10px;
+    margin-left: 0px;
+    font-size: x-small;
+
+    transition: 0.4s;
+}
+
+ul.menu h1 a:hover, ul.menu h2 a:hover, ul.menu h3 a:hover{
+    background-color: rgba(0, 0, 0, 0.36);
+    box-shadow: 0em 0em 1em white;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.logo {
+    font-family: cordel;
+    margin-top: 12px;
+    margin-left: 1em;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    color: rgb(255, 255, 255);
+    text-decoration: bold;
+}
+
+.logo a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo a:visited {
+    text-decoration: none; 
+    color: inherit;
+}
+
+.cacto {
+    position: absolute;
+    width: 2em;
+    margin-left: 6.2em;
+    box-shadow: 0 0 0 0;
+}
+
+.patrocinadores {
+    bottom: 100%;
+    text-shadow: 0.1em 0.2em 0.1em black;
+    color: white;
+    font-family: cordel;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+
+    padding: 10px 2px 2px 2px;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.container img {
+    box-shadow: 0.1em 0.2em 1em black;
+    flex-wrap: wrap;
+    display: flex;
+    border-radius: 20px;
+}
+
+.container h1 {
+    text-align: center;
+    margin: 0 auto;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: lemon;
+    position: relative;
+    text-shadow: 0.1em 0.2em 0.1em black;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.overlay {
+    flex-wrap: wrap;
+    display: flex;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 93%;
+    border-radius: 20px;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.eu:hover .overlay {
+    opacity: 0.2;
+}
+
+.eu:hover h1 {
+    top: 60%;
+    opacity: 1;
+}
+
+.luigi:hover .overlay {
+    opacity: 0.2;
+}
+
+.luigi:hover h1 {
+    top: 60%;
+    opacity: 1;
+}
+
+.luis:hover .overlay {
+    opacity: 0.2;
+}
+
+.luis:hover h1 {
+    top: 60%;
+    opacity: 1;
+}
+
+.nonas:hover .overlay {
+    opacity: 0.2;
+}
+
+.nonas:hover h1 {
+    top: 60%;
+    opacity: 1;
+}
